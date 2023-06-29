@@ -1,0 +1,30 @@
+mport difflib
+
+
+def correct_word(word):
+    
+dictionary = ['apple', 'banana', 'carrot', 'grape', 'orange'] 
+ # Example dictionary
+    closest_word = difflib.get_close_matches(word, dictionary, n=1)
+    
+ 
+   if closest_word:
+  
+      return closest_word[0]
+
+    else:
+  
+      return None
+
+
+# Example usage
+misspelled_word = 'oranje
+'
+corrected_word = correct_word(misspelled_word)
+if corrected_word:
+ 
+   print(f"The corrected word is: {corrected_word}")
+
+else:
+
+   print("No correction found.")
