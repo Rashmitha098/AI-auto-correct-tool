@@ -1,4 +1,4 @@
-mport difflib
+import difflib
 
 
 def correct_word(word):
